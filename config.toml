@@ -1,3 +1,7 @@
 baseurl = "http://replace-this-with-your-hugo-site.com/"
 languageCode = "en-us"
 title = "My New Hugo Site"
+disqusShortname = "awesomearian"
+
+[params]
+  gravatarHash = "046fa9e14978671c197265898995c4dd"

@@ -1,12 +1,24 @@
-= doctype html
-html lang=en
-  head
-    title Hello Ace
-    link rel="stylesheet" href="css/main.css"
-  body
-    #container.wrapper
-      p..
-        Ace is an HTML template engine for Go.
-        This engine simplifies HTML coding in Go web application development.
-    = javascript
-      console.log('Welcome to Ace');
+{{ partial "head.html" . }}
+  div class="welcome-msg"
+    div class="container"
+      p.
+        Hello! This is my blog made as a requirement for UPD's EDR 121 class.
+      p.
+        Here I'll be posting essays made for the class. Since most of it will be posted unedited, some context might be lost, and the articles might appear untailored as a web article
+
+main class="container"
+  div class="posts"
+    div class="posts__label"
+      strong.
+        Posts
+    {{ range .Data.Pages.ByDate }}
+      a class="post-preview" href="{{ .Permalink }}"
+        .post-title.post-title_no-margin.post-title_preview
+          div class="image-preview"
+            img src="/media/{{ .Params.image }}"
+          h1
+            {{ .Title }}
+          h2
+            {{ .Params.subtitle }}
+    {{ end }}
+{{ partial "foot.html" . }}

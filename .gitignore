@@ -1,3 +1,4 @@
 node_modules
 public
 static/css/**/*.css
+static/js/**/*.js

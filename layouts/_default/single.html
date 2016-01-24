@@ -1,0 +1,48 @@
+{{ partial "head.html" . }}
+{{ if .Params.image }}
+  <div class="post-image" style="background-image: url('/media/{{ .Params.image }}');">
+    <div class="post-image__caption">
+      <div class="post-title">
+        <h1>{{ .Title }}</h1>
+        <h2>{{ .Params.subtitle }}</h2>
+      </div>
+    </div>
+  </div>
+{{ end }}
+<div class="container">
+  <article class="post">
+    <header>
+      <div class="meta">
+        {{ if .Site.Params.gravatarHash }}
+          <img class="meta__avatar" src='http://www.gravatar.com/avatar/{{ .Site.Params.gravatarHash }}?s=36' alt="Profile Picture" />
+        {{ end }}
+        <div class="meta__inline">
+          <a class="meta__author" href="/">Awesome Arian</a>
+          <div class="meta__supplemental">{{ .Date.Format "Jan 2, 2006" }} &middot; {{ .ReadingTime }} min read</div>
+        </div>
+      </div>
+      {{ if not .Params.image }}
+        <div class="post-title post-title_no-margin">
+          <h1>{{ .Title }}</h1>
+          <h2>{{ .Params.subtitle }}</h2>
+        </div>
+      {{ end }}
+    </header>
+    {{ .Content }}
+  </article>
+  {{ if .Site.DisqusShortname }}<div id="disqus_thread"></div>{{ end }}
+</div>
+
+{{ with .Site.DisqusShortname }}
+<script type="text/javascript">
+    var disqus_shortname = {{ . }};
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+{{ end }}
+{{ partial "foot.html" . }}

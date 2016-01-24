@@ -1,0 +1,55 @@
+{{ partial "head.html" . }}
+<div class="content container">
+  {{ $root := .}}
+    {{ $page := (index .Data.Pages 0) }}
+    {{ range $taxonomy, $value := .Data }}
+      {{if ne $taxonomy "Pages"}}
+        {{ range (index $page.Params $taxonomy) }}
+          {{ if eq ($root.Title | urlize | title) (. | urlize | title) }}
+            <a href="{{ $root.Site.BaseURL }}/{{ $taxonomy | urlize }}">&lt; {{ $taxonomy | title }}</a>
+            <h1 class="title">{{ . }}</h1>
+            {{ $desc := printf "%s-desc" $taxonomy }}
+            {{ $desctax := index $root.Site.Taxonomies $desc }}
+            {{ $descpages := index $desctax (. | urlize) }}
+            {{ if len $descpages }}
+              {{ $descpage := index $descpages 0 }}
+              <span class="term-desc">{{ $descpage.Page.Content }}</span>
+            {{end}}
+
+          {{end}}
+        {{end}}
+      {{end}}
+    {{end}}
+
+    <ul>
+    {{ range .Data.Pages.ByDate }}
+        <li>
+          <a href="{{.Permalink}}">
+            {{ .LinkTitle }}
+          </a>
+          {{ if .Params.tech }}
+            <!--tech for trackposts-->
+            <small class="track-tech">
+              {{ .Params.tech }}
+            </small>
+          {{ end }}
+        </li>
+    {{end}}
+    </ul>
+
+  <h1>Projects</h1>
+
+  <div class="gallery">
+    {{ range $.Site.Data.projects }}
+      <div class="gallery-item">
+        <a href="{{ .url }}">
+          <img src="{{ .img }}"/>
+          {{ .name }}
+        </a>
+        <p>by: {{ .nick }}</p>
+      </div>
+    {{ end }}
+  </div>
+
+</div>
+{{ partial "foot.html" . }}
