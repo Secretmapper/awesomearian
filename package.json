@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp & hugo server --watch"
+    "start": "gulp & hugo server --watch --buildDrafts=true"
   },
   "author": "Arian Allenson Valdez <Secretmapper16@gmail.com>",
   "license": "ISC",
@@ -12,6 +12,11 @@
     "gulp": "^3.9.0",
     "gulp-minify": "0.0.5",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-stylus": "^2.2.0"
+    "gulp-stylus": "^2.2.0",
+    "gulp-webpack": "^1.5.0",
+    "webpack": "^1.12.12"
+  },
+  "dependencies": {
+    "sneakpeek": "0.0.10"
   }
 }
