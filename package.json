@@ -1,0 +1,17 @@
+{
+  "name": "awesome",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp & hugo server --watch"
+  },
+  "author": "Arian Allenson Valdez <Secretmapper16@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-minify": "0.0.5",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.2.0"
+  }
+}
