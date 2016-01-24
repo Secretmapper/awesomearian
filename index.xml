@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My New Hugo Site</title>
-    <link>http://replace-this-with-your-hugo-site.com/</link>
+    <link>http://awesome.arianv.com/</link>
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 24 Jan 2016 16:13:30 +0800</lastBuildDate>
-    <atom:link href="http://replace-this-with-your-hugo-site.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://awesome.arianv.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The Child That Books Built</title>
-      <link>http://replace-this-with-your-hugo-site.com/the-child-that-books-built/</link>
+      <link>http://awesome.arianv.com/the-child-that-books-built/</link>
       <pubDate>Sun, 24 Jan 2016 16:13:30 +0800</pubDate>
       
-      <guid>http://replace-this-with-your-hugo-site.com/the-child-that-books-built/</guid>
+      <guid>http://awesome.arianv.com/the-child-that-books-built/</guid>
       <description>&lt;p&gt;I still vividly remember the very first &amp;ldquo;children’s book&amp;rdquo; my mother got for me. &amp;ldquo;Jack and the Beanstalk&amp;rdquo;, it’s title was, the lush greenery of nature in the cover of which, was a stark contrast of the gray drab ‘urbanity’ of Metro Manila, where we stayed at the time.&lt;/p&gt;
 
 &lt;p&gt;The book reaffirmed within me this &lt;em&gt;strong desire for adventure, to not settle down and resign myself to fate, and to dream of the world that can be.&lt;/em&gt; A desire, I presume, all children had, that of innate curiosity for the world around us. What was new to me then however, was that it made me realize, that I should strive for them, even if it means confronting things I would not be comfortable with.&lt;/p&gt;
