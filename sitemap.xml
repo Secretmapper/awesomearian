@@ -3,7 +3,18 @@
   
   <url>
     <loc>http://awesome.arianv.com/</loc>
+    <lastmod>2016-02-22T14:44:58+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://awesome.arianv.com/a-day-with-the-authors/</loc>
+    <lastmod>2016-02-22T14:44:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://awesome.arianv.com/the-child-that-books-built/</loc>
+    <lastmod>2016-01-24T16:13:30+08:00</lastmod>
   </url>
   
 </urlset>
