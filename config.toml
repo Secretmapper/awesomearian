@@ -1,6 +1,6 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "http://awesome.arianv.com"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Awesome Arian's Blog"
 disqusShortname = "awesomearian"
 
 [params]
